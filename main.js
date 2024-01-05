@@ -62,11 +62,11 @@ function saveContent() {
   getClasses(code);
 }
 
-function resetContent() {
-  if (confirm("Are you sure you want to reset the Gato's code?")) {
-    localStorage.removeItem("code");
-    window.editor.setValue(EXAMPLE_GATO);
-    getClasses(EXAMPLE_GATO);
+function resetContent(code) {
+  if (confirm("This will reset the Gato's code. Are you sure you want to continue?")) {
+    localStorage.setItem("code", code);
+    window.editor.setValue(code);
+    getClasses(code);
   }
 }
 
@@ -121,7 +121,7 @@ async function prepareLaunch() {
     sel = document.querySelector(`#gato${i}class`);
     inp = document.querySelector(`#gato${i}name`);
 
-    imports.add(`from ${sel.value} import ${sel.value}`);
+    imports.add(`import ${sel.value}\nimportlib.reload(${sel.value})\nfrom ${sel.value} import ${sel.value}`);
     team.add(sel.value);
     definitions.push(`gato${i} = ${sel.value}(name="${inp.value}")\nteam.append(gato${i})\ngato${i}.deploy()`);
   }
@@ -154,7 +154,8 @@ async function launch() {
   }
   document.querySelector(".output").innerHTML += `> Simulating for ${duration} seconds...\n\n`;
   try {
-    window.pyodide.runPython(`import random
+    window.pyodide.runPython(`import importlib
+import random
 
 from ABaseGato import ABaseGato
 ${imports}

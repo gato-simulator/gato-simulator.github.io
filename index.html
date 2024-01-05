@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="style.css">
   <script src="mygato.py.js"></script>
+  <script src="emptygato.py.js"></script>
 </head>
 <body>
   <div class="main">
@@ -49,7 +50,8 @@
         </table>
         <p>
           <button id="launch" onclick='launch()' disabled>Launch</button>
-          <button id="launch" onclick='resetContent()'>Reset code</button>
+          <button id="launch" onclick='resetContent(EXAMPLE_GATO)'>Example gato code</button>
+          <button id="launch" onclick='resetContent(EMPTY_GATO)'>Empty gato code</button>
         </p>
       </div>
       <textarea class="output" disabled wrap="off">> Loading...
