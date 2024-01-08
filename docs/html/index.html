@@ -55,6 +55,7 @@
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.IMAGE"><code class="docutils literal notranslate"><span class="pre">ABaseGato.IMAGE</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.ANIMATIONS"><code class="docutils literal notranslate"><span class="pre">ABaseGato.ANIMATIONS</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.DISPLAY_NAME"><code class="docutils literal notranslate"><span class="pre">ABaseGato.DISPLAY_NAME</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.RARITY"><code class="docutils literal notranslate"><span class="pre">ABaseGato.RARITY</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.EVENT_DESCRIPTIONS"><code class="docutils literal notranslate"><span class="pre">ABaseGato.EVENT_DESCRIPTIONS</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.BASE_EARN_RATE"><code class="docutils literal notranslate"><span class="pre">ABaseGato.BASE_EARN_RATE</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.BITE_CHANCE"><code class="docutils literal notranslate"><span class="pre">ABaseGato.BITE_CHANCE</span></code></a></li>
@@ -65,10 +66,8 @@
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.max_health"><code class="docutils literal notranslate"><span class="pre">ABaseGato.max_health</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.base_efficiency"><code class="docutils literal notranslate"><span class="pre">ABaseGato.base_efficiency</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.luck"><code class="docutils literal notranslate"><span class="pre">ABaseGato.luck</span></code></a></li>
-<li><a class="reference internal" href="#ABaseGato.ABaseGato.efficiency_boost"><code class="docutils literal notranslate"><span class="pre">ABaseGato.efficiency_boost</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.friendship"><code class="docutils literal notranslate"><span class="pre">ABaseGato.friendship</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.claimed_today"><code class="docutils literal notranslate"><span class="pre">ABaseGato.claimed_today</span></code></a></li>
-<li><a class="reference internal" href="#ABaseGato.ABaseGato._events"><code class="docutils literal notranslate"><span class="pre">ABaseGato._events</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato._time_deployed"><code class="docutils literal notranslate"><span class="pre">ABaseGato._time_deployed</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.mood"><code class="docutils literal notranslate"><span class="pre">ABaseGato.mood</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.hunger"><code class="docutils literal notranslate"><span class="pre">ABaseGato.hunger</span></code></a></li>
@@ -77,6 +76,12 @@
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.efficiency"><code class="docutils literal notranslate"><span class="pre">ABaseGato.efficiency</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.name"><code class="docutils literal notranslate"><span class="pre">ABaseGato.name</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.eidolon"><code class="docutils literal notranslate"><span class="pre">ABaseGato.eidolon</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato._events"><code class="docutils literal notranslate"><span class="pre">ABaseGato._events</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.efficiency_boosts"><code class="docutils literal notranslate"><span class="pre">ABaseGato.efficiency_boosts</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.damage_reductions"><code class="docutils literal notranslate"><span class="pre">ABaseGato.damage_reductions</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.hunger_reductions"><code class="docutils literal notranslate"><span class="pre">ABaseGato.hunger_reductions</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.mood_loss_reductions"><code class="docutils literal notranslate"><span class="pre">ABaseGato.mood_loss_reductions</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.energy_loss_reductions"><code class="docutils literal notranslate"><span class="pre">ABaseGato.energy_loss_reductions</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato._fainted"><code class="docutils literal notranslate"><span class="pre">ABaseGato._fainted</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.to_json"><code class="docutils literal notranslate"><span class="pre">ABaseGato.to_json()</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.from_json"><code class="docutils literal notranslate"><span class="pre">ABaseGato.from_json()</span></code></a></li>
@@ -147,25 +152,30 @@ Attributes</span><ul>
 <a class="reference internal" href="#ABaseGato.ABaseGato.DISPLAY_NAME">DISPLAY_NAME</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.EVENT_DESCRIPTIONS">EVENT_DESCRIPTIONS</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.IMAGE">IMAGE</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.RARITY">RARITY</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.VALUES_TO_SAVE">VALUES_TO_SAVE</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato._events">_events</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato._fainted">_fainted</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato._time_deployed">_time_deployed</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.base_efficiency">base_efficiency</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.claimed_today">claimed_today</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.damage_reductions">damage_reductions</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.efficiency">efficiency</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#ABaseGato.ABaseGato.efficiency_boost">efficiency_boost</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.efficiency_boosts">efficiency_boosts</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.eidolon">eidolon</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.energy">energy</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.energy_loss_reductions">energy_loss_reductions</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.friendship">friendship</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.health">health</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.hunger">hunger</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.hunger_reductions">hunger_reductions</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.luck">luck</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.max_energy">max_energy</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.max_health">max_health</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.max_hunger">max_hunger</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.max_mood">max_mood</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.mood">mood</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.mood_loss_reductions">mood_loss_reductions</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.name">name</a></li></ul>
 </div><div class="py-attribute-table-column" style="margin-right: 20px;">
 <span>
@@ -222,6 +232,12 @@ Attributes in CAPS are constants.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.RARITY">
+<span class="sig-name descname"><span class="pre">RARITY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.RARITY" title="Link to this definition"></a></dt>
+<dd><p>Rarity of the gato in stars (3-5). <strong>OVERRIDE IT!</strong></p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.EVENT_DESCRIPTIONS">
 <span class="sig-name descname"><span class="pre">EVENT_DESCRIPTIONS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'bitten':</span> <span class="pre">'is</span> <span class="pre">angry</span> <span class="pre">and</span> <span class="pre">bites</span> <span class="pre">you</span> <span class="pre">(x{count}).</span> <span class="pre">You</span> <span class="pre">lose</span> <span class="pre">**{amount}**</span> <span class="pre">{currency}</span> <span class="pre">in</span> <span class="pre">total',</span> <span class="pre">'fainted':</span> <span class="pre">'fainted.'}</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.EVENT_DESCRIPTIONS" title="Link to this definition"></a></dt>
 <dd><p>Description for the gato’s events. <em>Can be overriden or completed with custom events.</em>
@@ -230,7 +246,7 @@ For example, <cite>SkellyGato</cite> has a custom event called <cite>“resurrec
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.BASE_EARN_RATE">
-<span class="sig-name descname"><span class="pre">BASE_EARN_RATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.25</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.BASE_EARN_RATE" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">BASE_EARN_RATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0625</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.BASE_EARN_RATE" title="Link to this definition"></a></dt>
 <dd><p>Number of currency per second the gato earns. <strong>DON’T OVERRIDE IT</strong>, rather override <a class="reference internal" href="#ABaseGato.ABaseGato.base_efficiency" title="ABaseGato.ABaseGato.base_efficiency"><code class="xref py py-attr docutils literal notranslate"><span class="pre">base_efficiency</span></code></a>.</p>
 </dd></dl>
 
@@ -242,7 +258,7 @@ For example, <cite>SkellyGato</cite> has a custom event called <cite>“resurrec
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.VALUES_TO_SAVE">
-<span class="sig-name descname"><span class="pre">VALUES_TO_SAVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['name',</span> <span class="pre">'mood',</span> <span class="pre">'health',</span> <span class="pre">'hunger',</span> <span class="pre">'energy',</span> <span class="pre">'health',</span> <span class="pre">'efficiency_boost',</span> <span class="pre">'eidolon',</span> <span class="pre">'friendship',</span> <span class="pre">'deployed_today']</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.VALUES_TO_SAVE" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">VALUES_TO_SAVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['name',</span> <span class="pre">'mood',</span> <span class="pre">'health',</span> <span class="pre">'hunger',</span> <span class="pre">'energy',</span> <span class="pre">'health',</span> <span class="pre">'efficiency_boosts',</span> <span class="pre">'damage_reductions',</span> <span class="pre">'eidolon',</span> <span class="pre">'friendship',</span> <span class="pre">'deployed_today']</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.VALUES_TO_SAVE" title="Link to this definition"></a></dt>
 <dd><p>Attributes that will be saved when exporting the gato to JSON. <em>Can be overriden or completed with custom attributes.</em></p>
 </dd></dl>
 
@@ -283,12 +299,6 @@ For example, <cite>SkellyGato</cite> has a custom event called <cite>“resurrec
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ABaseGato.ABaseGato.efficiency_boost">
-<span class="sig-name descname"><span class="pre">efficiency_boost</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.efficiency_boost" title="Link to this definition"></a></dt>
-<dd><p>Boost of the efficiency stat. Can be affected by the gato or other gatos.</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.friendship">
 <span class="sig-name descname"><span class="pre">friendship</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.0</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.friendship" title="Link to this definition"></a></dt>
 <dd><p>Friendship stat, starts at 1, max 10.</p>
@@ -298,12 +308,6 @@ For example, <cite>SkellyGato</cite> has a custom event called <cite>“resurrec
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.claimed_today">
 <span class="sig-name descname"><span class="pre">claimed_today</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.claimed_today" title="Link to this definition"></a></dt>
 <dd><p>Number of times the rewards of this gato have been claimed today.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ABaseGato.ABaseGato._events">
-<span class="sig-name descname"><span class="pre">_events</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#ABaseGato.ABaseGato._events" title="Link to this definition"></a></dt>
-<dd><p>List of events. Cleared everytime the rewards are claimed. An event is a dict like <cite>{“event_name”: “optional value (can be any type)”}</cite></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -352,6 +356,42 @@ For example, <cite>SkellyGato</cite> has a custom event called <cite>“resurrec
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.eidolon">
 <span class="sig-name descname"><span class="pre">eidolon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.eidolon" title="Link to this definition"></a></dt>
 <dd><p>Eidolon level of the gato. Starts at 0, max 6.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato._events">
+<span class="sig-name descname"><span class="pre">_events</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#ABaseGato.ABaseGato._events" title="Link to this definition"></a></dt>
+<dd><p>List of events. Cleared everytime the rewards are claimed. An event is a dict like <cite>{“event_name”: “optional value (can be any type)”}</cite></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.efficiency_boosts">
+<span class="sig-name descname"><span class="pre">efficiency_boosts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.efficiency_boosts" title="Link to this definition"></a></dt>
+<dd><p>Boosts of the efficiency stat. The gato or other gatos can add things to it, with a unique key per gato.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.damage_reductions">
+<span class="sig-name descname"><span class="pre">damage_reductions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.damage_reductions" title="Link to this definition"></a></dt>
+<dd><p>Reduces damage taken. The gato or other gatos can add things to it, with a unique key per gato.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.hunger_reductions">
+<span class="sig-name descname"><span class="pre">hunger_reductions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.hunger_reductions" title="Link to this definition"></a></dt>
+<dd><p>Reduces hunger loss. The gato or other gatos can add things to it, with a unique key per gato.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.mood_loss_reductions">
+<span class="sig-name descname"><span class="pre">mood_loss_reductions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.mood_loss_reductions" title="Link to this definition"></a></dt>
+<dd><p>Reduces mood loss. The gato or other gatos can add things to it, with a unique key per gato.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.energy_loss_reductions">
+<span class="sig-name descname"><span class="pre">energy_loss_reductions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.energy_loss_reductions" title="Link to this definition"></a></dt>
+<dd><p>Reduces energy loss. The gato or other gatos can add things to it, with a unique key per gato.</p>
 </dd></dl>
 
 <dl class="py attribute">
