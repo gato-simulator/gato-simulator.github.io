@@ -31,7 +31,7 @@ def handle_events(team: list[ABaseGato]):
             if et == "bitten":
                 args["amount"] = 0
                 for _ in value:
-                    rnd = random.randint(10, 50)
+                    rnd = random.randint(2, 10)
                     args["amount"] += rnd
                 args["currency"] = CURRENCY_EMOJI
                 args["count"] = len(value)
