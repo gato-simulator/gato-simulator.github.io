@@ -72,7 +72,7 @@ function resetContent(code) {
 
 async function getGato(className) {
   await window.pyodide.runPythonAsync(`from pyodide.http import pyfetch
-response = await pyfetch(f"https://raw.githubusercontent.com/Cyxo/mm-plugins/test/gato/gatos/${className}.py")
+response = await pyfetch(f"https://raw.githubusercontent.com/Cyxo/mm-plugins/dev/gato/gatos/${className}.py")
 if response.ok:
     with open("${className}.py", "wb") as f:
         f.write(await response.bytes())
