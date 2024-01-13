@@ -46,7 +46,7 @@ ${definitions}
 tm = Team(team)
 
 for gato in tm.gatos:
-    gato.deploy()
+    gato.deploy(tm.gatos)
 
 TIME_STEP = 1
 currency = 0

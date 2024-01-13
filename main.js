@@ -123,7 +123,7 @@ async function prepareLaunch() {
 
     imports.add(`import ${sel.value}\nimportlib.reload(${sel.value})\nfrom ${sel.value} import ${sel.value}`);
     team.add(sel.value);
-    definitions.push(`gato${i} = ${sel.value}(name="${inp.value}")\nteam.append(gato${i})\ngato${i}.deploy()`);
+    definitions.push(`gato${i} = ${sel.value}(name="${inp.value}")\nteam.append(gato${i})`);
   }
 
   const code = window.editor.getValue();
