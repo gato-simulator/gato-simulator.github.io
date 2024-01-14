@@ -87,6 +87,7 @@ async function main(){
   window.pyodide.setStdin({ error: true });
   window.pyodide.setStderr({batched: (str) => writeToOutput(str)});
   window.pyodide.setStdout({batched: (str) => writeToOutput(str)});
+  await getGato("ABaseItem");
   await getGato("ABaseGato");
   writeToOutput("> Loaded!");
   document.querySelector("#launch").removeAttribute("disabled");
