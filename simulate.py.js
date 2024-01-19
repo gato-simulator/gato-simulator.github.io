@@ -13,33 +13,40 @@ class Team:
     def __init__(self, gatos: list[ABaseGato]):
         self.gatos = gatos
 
-def handle_events(team: list[ABaseGato]):
-    description = ""
+class Transactions:
+
+    currency: float = 0.0
+    add_items: list[str]
+    rm_items: list[str]
+
+    def __init__(self, **kwargs) -> None:
+        self.add_items = []
+        self.rm_items = []
+
+class Player:
+
+    nursery: list
+    deployed_team: Team
+    transactions: Transactions
+
+    currency: float = 0
+    inventory: list
+
+
+    def __init__(self, **kwargs) -> None:
+        self.nursery = []
+        self.deployed_team = None
+        self.transactions = Transactions()
+        self.inventory = []
+
+
+def handle_events(plyr, team: list[ABaseGato]):
+    lines = []
 
     for gato in team:
-        events_by_type = {}
-        for event in gato._events:
-            et = list(event.keys())[0]
-            if et not in events_by_type:
-                events_by_type[et] = []
-            events_by_type[et].append(event[et])
+        lines += gato.handle_events(plyr, CURRENCY_EMOJI)
 
-        for et, value in events_by_type.items():
-            description += f"- **{gato.name}** "
-
-            args = {}
-            if et == "bitten":
-                args["amount"] = 0
-                for _ in value:
-                    rnd = random.randint(2, 10)
-                    args["amount"] += rnd
-                args["currency"] = CURRENCY_EMOJI
-                args["count"] = len(value)
-
-            description += gato.EVENT_DESCRIPTIONS[et].format(**args)
-            description += "\\n"
-
-    return description
+    return "\\n".join(lines)
 
 team = []
 ${definitions}
@@ -60,7 +67,7 @@ for _ in range(0, ${duration}, TIME_STEP):
         currency += c
         objects += o
 
-events = handle_events(tm.gatos)
+events = handle_events(Player(), tm.gatos)
 
 for gato in tm.gatos:
     gato.claim()
