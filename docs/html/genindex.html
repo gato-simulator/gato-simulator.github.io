@@ -77,6 +77,7 @@
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
@@ -85,6 +86,7 @@
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
  | <a href="#V"><strong>V</strong></a>
  
 </div>
@@ -107,6 +109,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#ABaseGato.ABaseGato">ABaseGato (class in ABaseGato)</a>
 </li>
+      <li><a href="index.html#AConsumable.AConsumable">AConsumable (class in AConsumable)</a>
+</li>
       <li><a href="index.html#ABaseGato.ABaseGato.add_energy">add_energy() (ABaseGato.ABaseGato method)</a>
 </li>
       <li><a href="index.html#ABaseGato.ABaseGato.add_health">add_health() (ABaseGato.ABaseGato method)</a>
@@ -116,6 +120,8 @@
       <li><a href="index.html#ABaseGato.ABaseGato.add_hunger">add_hunger() (ABaseGato.ABaseGato method)</a>
 </li>
       <li><a href="index.html#ABaseGato.ABaseGato.add_mood">add_mood() (ABaseGato.ABaseGato method)</a>
+</li>
+      <li><a href="index.html#AEquipment.AEquipment">AEquipment (class in AEquipment)</a>
 </li>
       <li><a href="index.html#ABaseGato.ABaseGato.ANIMATIONS">ANIMATIONS (ABaseGato.ABaseGato attribute)</a>
 </li>
@@ -140,12 +146,18 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#ABaseGato.ABaseGato.claim">claim() (ABaseGato.ABaseGato method)</a>
+
+      <ul>
+        <li><a href="index.html#AEquipment.AEquipment.claim">(AEquipment.AEquipment method)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#ABaseGato.ABaseGato.claimed_today">claimed_today (ABaseGato.ABaseGato attribute)</a>
 </li>
       <li><a href="index.html#ABaseGato.ABaseGato.compute_currency">compute_currency() (ABaseGato.ABaseGato method)</a>
+</li>
+      <li><a href="index.html#AConsumable.AConsumable.consume">consume() (AConsumable.AConsumable method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -155,10 +167,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#ABaseGato.ABaseGato.damage_reductions">damage_reductions (ABaseGato.ABaseGato attribute)</a>
 </li>
+      <li><a href="index.html#ABaseGato.ABaseGato.deploy">deploy() (ABaseGato.ABaseGato method)</a>
+
+      <ul>
+        <li><a href="index.html#AEquipment.AEquipment.deploy">(AEquipment.AEquipment method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="index.html#ABaseGato.ABaseGato.deploy">deploy() (ABaseGato.ABaseGato method)</a>
-</li>
       <li><a href="index.html#ABaseGato.ABaseGato.DISPLAY_NAME">DISPLAY_NAME (ABaseGato.ABaseGato attribute)</a>
 </li>
   </ul></td>
@@ -196,9 +212,19 @@
   </ul></td>
 </tr></table>
 
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#ABaseGato.ABaseGato.get_args_for_event">get_args_for_event() (ABaseGato.ABaseGato method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#ABaseGato.ABaseGato.handle_events">handle_events() (ABaseGato.ABaseGato method)</a>
+</li>
       <li><a href="index.html#ABaseGato.ABaseGato.health">health (ABaseGato.ABaseGato attribute)</a>
 </li>
   </ul></td>
@@ -215,6 +241,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#ABaseGato.ABaseGato.IMAGE">IMAGE (ABaseGato.ABaseGato attribute)</a>
 </li>
+      <li><a href="index.html#ABaseGato.ABaseGato.ITEM_TYPE">ITEM_TYPE (ABaseGato.ABaseGato attribute)</a>
+
+      <ul>
+        <li><a href="index.html#AConsumable.AConsumable.ITEM_TYPE">(AConsumable.AConsumable attribute)</a>
+</li>
+        <li><a href="index.html#AEquipment.AEquipment.ITEM_TYPE">(AEquipment.AEquipment attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -275,8 +309,16 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="index.html#ABaseGato.ABaseGato.simulate">simulate() (ABaseGato.ABaseGato method)</a>
+      <li><a href="index.html#ABaseGato.ABaseGato.set_eidolon">set_eidolon() (ABaseGato.ABaseGato method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#ABaseGato.ABaseGato.simulate">simulate() (ABaseGato.ABaseGato method)</a>
+
+      <ul>
+        <li><a href="index.html#AEquipment.AEquipment.simulate">(AEquipment.AEquipment method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -284,6 +326,14 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#ABaseGato.ABaseGato.to_json">to_json() (ABaseGato.ABaseGato method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#AEquipment.AEquipment.used_up">used_up (AEquipment.AEquipment attribute)</a>
 </li>
   </ul></td>
 </tr></table>
