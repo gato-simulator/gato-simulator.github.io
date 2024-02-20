@@ -90,6 +90,7 @@ async function main(){
   await getGato("ABaseItem");
   await getGato("ABaseGato");
   writeToOutput("> Loaded!");
+  window.pyodide.registerJsModule("discord", {})
   document.querySelector("#launch").removeAttribute("disabled");
 }
 

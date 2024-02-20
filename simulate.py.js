@@ -56,21 +56,21 @@ for gato in tm.gatos:
     gato.deploy(tm.gatos)
 
 TIME_STEP = 1
-currency = 0
-objects = []
 for _ in range(0, ${duration}, TIME_STEP):
     if all(gato._fainted for gato in tm.gatos):
         break
 
     for gato in tm.gatos:
-        c, o = gato.simulate(tm.gatos, TIME_STEP)
-        currency += c
-        objects += o
+        gato.simulate(tm.gatos, TIME_STEP)
 
 events = handle_events(Player(), tm.gatos)
 
+currency = 0
+objects = []
 for gato in tm.gatos:
-    gato.claim()
+    c, o = gato.claim()
+    currency += c
+    objects += o
 
 if len(events) == 0:
     events = "*Nothing specific happened.*"

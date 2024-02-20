@@ -12,7 +12,5 @@ class EmptyGato(ABaseGato):
 
     def simulate(self, team: list["ABaseGato"], seconds: int = 1):
         # Call the parent function
-        currency, objects = super().simulate(seconds)
-
-        return currency, objects
+        super().simulate(seconds)
 `;
