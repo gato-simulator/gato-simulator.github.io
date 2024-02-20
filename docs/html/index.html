@@ -77,7 +77,10 @@
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.efficiency"><code class="docutils literal notranslate"><span class="pre">ABaseGato.efficiency</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.name"><code class="docutils literal notranslate"><span class="pre">ABaseGato.name</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.eidolon"><code class="docutils literal notranslate"><span class="pre">ABaseGato.eidolon</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.fetched_currency"><code class="docutils literal notranslate"><span class="pre">ABaseGato.fetched_currency</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato._events"><code class="docutils literal notranslate"><span class="pre">ABaseGato._events</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.equipments"><code class="docutils literal notranslate"><span class="pre">ABaseGato.equipments</span></code></a></li>
+<li><a class="reference internal" href="#ABaseGato.ABaseGato.fetched_objects"><code class="docutils literal notranslate"><span class="pre">ABaseGato.fetched_objects</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.efficiency_boosts"><code class="docutils literal notranslate"><span class="pre">ABaseGato.efficiency_boosts</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.damage_reductions"><code class="docutils literal notranslate"><span class="pre">ABaseGato.damage_reductions</span></code></a></li>
 <li><a class="reference internal" href="#ABaseGato.ABaseGato.hunger_reductions"><code class="docutils literal notranslate"><span class="pre">ABaseGato.hunger_reductions</span></code></a></li>
@@ -109,6 +112,7 @@
 <li><a class="reference internal" href="#id1">Class</a><ul>
 <li><a class="reference internal" href="#AEquipment.AEquipment"><code class="docutils literal notranslate"><span class="pre">AEquipment</span></code></a><ul>
 <li><a class="reference internal" href="#AEquipment.AEquipment.ITEM_TYPE"><code class="docutils literal notranslate"><span class="pre">AEquipment.ITEM_TYPE</span></code></a></li>
+<li><a class="reference internal" href="#AEquipment.AEquipment.VALUES_TO_SAVE"><code class="docutils literal notranslate"><span class="pre">AEquipment.VALUES_TO_SAVE</span></code></a></li>
 <li><a class="reference internal" href="#AEquipment.AEquipment.used_up"><code class="docutils literal notranslate"><span class="pre">AEquipment.used_up</span></code></a></li>
 <li><a class="reference internal" href="#AEquipment.AEquipment.deploy"><code class="docutils literal notranslate"><span class="pre">AEquipment.deploy()</span></code></a></li>
 <li><a class="reference internal" href="#AEquipment.AEquipment.claim"><code class="docutils literal notranslate"><span class="pre">AEquipment.claim()</span></code></a></li>
@@ -195,6 +199,9 @@ Attributes</span><ul>
 <a class="reference internal" href="#ABaseGato.ABaseGato.eidolon">eidolon</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.energy">energy</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.energy_loss_reductions">energy_loss_reductions</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.equipments">equipments</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.fetched_currency">fetched_currency</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#ABaseGato.ABaseGato.fetched_objects">fetched_objects</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.friendship">friendship</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.health">health</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#ABaseGato.ABaseGato.hunger">hunger</a></li><li class="py-attribute-table-entry">
@@ -257,7 +264,7 @@ Attributes in CAPS are constants.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.ANIMATIONS">
-<span class="sig-name descname"><span class="pre">ANIMATIONS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'mooncake'</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.ANIMATIONS" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ANIMATIONS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'mooncakegato'</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.ANIMATIONS" title="Link to this definition"></a></dt>
 <dd><p>A reference to a key in <cite>animations.json</cite>. <strong>OVERRIDE IT!</strong></p>
 </dd></dl>
 
@@ -300,7 +307,7 @@ For example, <cite>SkellyGato</cite> has a custom event called <cite>“resurrec
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.ITEM_TYPE">
-<span class="sig-name descname"><span class="pre">ITEM_TYPE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ItemType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.ITEM_TYPE" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ITEM_TYPE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ItemType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.ITEM_TYPE" title="Link to this definition"></a></dt>
 <dd><p>This is just because ABaseGato now extends ABaseItem. <strong>DON’T OVERRIDE IT</strong>, it would make no sense…</p>
 </dd></dl>
 
@@ -401,9 +408,27 @@ For example, <cite>SkellyGato</cite> has a custom event called <cite>“resurrec
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.fetched_currency">
+<span class="sig-name descname"><span class="pre">fetched_currency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#ABaseGato.ABaseGato.fetched_currency" title="Link to this definition"></a></dt>
+<dd><p>Amount of currency fetched since last claim.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato._events">
 <span class="sig-name descname"><span class="pre">_events</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#ABaseGato.ABaseGato._events" title="Link to this definition"></a></dt>
 <dd><p>List of events. Cleared everytime the rewards are claimed. An event is a dict like <cite>{“event_name”: “optional value (can be any type)”}</cite></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.equipments">
+<span class="sig-name descname"><span class="pre">equipments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">ABaseItem</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#ABaseGato.ABaseGato.equipments" title="Link to this definition"></a></dt>
+<dd><p>List of equipments on this gato.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABaseGato.ABaseGato.fetched_objects">
+<span class="sig-name descname"><span class="pre">fetched_objects</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#ABaseGato.ABaseGato.fetched_objects" title="Link to this definition"></a></dt>
+<dd><p>Objects fetched since last claim.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -458,7 +483,7 @@ For example, <cite>SkellyGato</cite> has a custom event called <cite>“resurrec
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ABaseGato.ABaseGato.from_json">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ABaseGato.ABaseGato.from_json" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">items_helper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ABaseGato.ABaseGato.from_json" title="Link to this definition"></a></dt>
 <dd><p>Class method to import a gato from JSON.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Classmethod<span class="colon">:</span></dt>
@@ -657,6 +682,7 @@ Use this rather than modifying <a class="reference internal" href="#ABaseGato.AB
 Attributes</span><ul>
 <li class="py-attribute-table-entry">
 <a class="reference internal" href="#AEquipment.AEquipment.ITEM_TYPE">ITEM_TYPE</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#AEquipment.AEquipment.VALUES_TO_SAVE">VALUES_TO_SAVE</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#AEquipment.AEquipment.used_up">used_up</a></li></ul>
 </div><div class="py-attribute-table-column" style="margin-right: 20px;">
 <span>
@@ -672,12 +698,18 @@ def</span><a class="reference internal" href="#AEquipment.AEquipment.simulate">s
 <h3>Class<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="AEquipment.AEquipment">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AEquipment.</span></span><span class="sig-name descname"><span class="pre">AEquipment</span></span><a class="headerlink" href="#AEquipment.AEquipment" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AEquipment.</span></span><span class="sig-name descname"><span class="pre">AEquipment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AEquipment.AEquipment" title="Link to this definition"></a></dt>
 <dd><p><strong>Abstract class</strong> to implement for every equipment.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="AEquipment.AEquipment.ITEM_TYPE">
 <span class="sig-name descname"><span class="pre">ITEM_TYPE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ItemType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#AEquipment.AEquipment.ITEM_TYPE" title="Link to this definition"></a></dt>
-<dd><p>This is just because AConsumable extends ABaseItem. <strong>You can override it to `TEAM_EQUIPEMENT`</strong></p>
+<dd><p>This is just because AConsumable extends ABaseItem. <strong>You can override it to `TEAM_EQUIPMENT`</strong></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AEquipment.AEquipment.VALUES_TO_SAVE">
+<span class="sig-name descname"><span class="pre">VALUES_TO_SAVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['used_up']</span></em><a class="headerlink" href="#AEquipment.AEquipment.VALUES_TO_SAVE" title="Link to this definition"></a></dt>
+<dd><p>Attributes that will be saved when exporting the gato to JSON. <em>Can be completed with custom attributes.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -694,7 +726,7 @@ def</span><a class="reference internal" href="#AEquipment.AEquipment.simulate">s
 
 <dl class="py method">
 <dt class="sig sig-object py" id="AEquipment.AEquipment.claim">
-<span class="sig-name descname"><span class="pre">claim</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AEquipment.AEquipment.claim" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">claim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gato</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AEquipment.AEquipment.claim" title="Link to this definition"></a></dt>
 <dd><p>Called everytime the owner claims the rewards of the equipped gato.</p>
 </dd></dl>
 
@@ -742,7 +774,7 @@ async</span><a class="reference internal" href="#AConsumable.AConsumable.consume
 <h3>Class<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="AConsumable.AConsumable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AConsumable.</span></span><span class="sig-name descname"><span class="pre">AConsumable</span></span><a class="headerlink" href="#AConsumable.AConsumable" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AConsumable.</span></span><span class="sig-name descname"><span class="pre">AConsumable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AConsumable.AConsumable" title="Link to this definition"></a></dt>
 <dd><p><strong>Abstract class</strong> to implement for every consumable.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="AConsumable.AConsumable.ITEM_TYPE">
@@ -752,7 +784,7 @@ async</span><a class="reference internal" href="#AConsumable.AConsumable.consume
 
 <dl class="py method">
 <dt class="sig sig-object py" id="AConsumable.AConsumable.consume">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">consume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gatogame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AConsumable.AConsumable.consume" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">consume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gatogame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gato</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AConsumable.AConsumable.consume" title="Link to this definition"></a></dt>
 <dd><p><strong>Abstract method</strong> to implement for all consumables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
